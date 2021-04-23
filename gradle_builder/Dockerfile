@@ -1,6 +1,6 @@
 FROM openshift/base-centos7
 
-MAINTAINER Tobias Brunner <tobias.brunner@vshn.ch>
+MAINTAINER uvelyster <uvely@naver.com>
 
 ENV GRADLE_VERSION=6.3
 
@@ -24,9 +24,6 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
     unzip -d /opt/gradle gradle-${GRADLE_VERSION}-bin.zip && \
     rm gradle-${GRADLE_VERSION}-bin.zip && \
     ln -s /opt/gradle/gradle-${GRADLE_VERSION}/bin/gradle /usr/local/bin/gradle
-
-# TODO (optional): Copy the builder files into /opt/app-root
-# COPY ./<builder_folder>/ /opt/app-root/
 
 # S2I scripts
 COPY ./s2i/bin/ /usr/libexec/s2i
