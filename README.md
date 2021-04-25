@@ -11,4 +11,8 @@ curl https://download.docker.com/linux/centos/docker-ce.repo > /etc/yum.repos.d/
 yum install -y docker-ce  
 systemctl start docker ; systemctl enable docker  
 
+
+## environment-dependent property management
+https://www.openshift.com/blog/environment-dependent-property-management-strategies-openshift-pipelines
+
 ## Build s2i-builder image for gradle
