@@ -3,56 +3,10 @@ kind: Template
 message: A new java application has been created in your project.
 metadata:
   annotations:
-    description: An example Java application using OpenJDK. For more information about
-      using this template, see https://github.com/jboss-openshift/application-templates.
-    iconClass: icon-rh-openjdk
-    openshift.io/display-name: OpenJDK
-    openshift.io/provider-display-name: Red Hat, Inc.
-    samples.operator.openshift.io/version: 4.5.4
     tags: java
-    template.openshift.io/documentation-url: https://access.redhat.com/documentation/en/
-    template.openshift.io/long-description: This template defines resources needed
-      to develop Red Hat OpenJDK Java based application.
-    template.openshift.io/support-url: https://access.redhat.com
-    version: 1.4.17
-  creationTimestamp: "2020-08-05T18:28:56Z"
   labels:
-    samples.operator.openshift.io/managed: "true"
-    template: openjdk-web-basic-s2i
-    xpaas: 1.4.17
-  managedFields:
-  - apiVersion: template.openshift.io/v1
-    fieldsType: FieldsV1
-    fieldsV1:
-      f:message: {}
-      f:metadata:
-        f:annotations:
-          .: {}
-          f:description: {}
-          f:iconClass: {}
-          f:openshift.io/display-name: {}
-          f:openshift.io/provider-display-name: {}
-          f:samples.operator.openshift.io/version: {}
-          f:tags: {}
-          f:template.openshift.io/documentation-url: {}
-          f:template.openshift.io/long-description: {}
-          f:template.openshift.io/support-url: {}
-          f:version: {}
-        f:labels:
-          .: {}
-          f:samples.operator.openshift.io/managed: {}
-          f:template: {}
-          f:xpaas: {}
-      f:objects: {}
-      f:parameters: {}
-    manager: cluster-samples-operator
-    operation: Update
-    time: "2020-08-05T18:28:56Z"
-  name: openjdk-web-basic-s2i
-  namespace: demo
-  resourceVersion: "12642"
-  selfLink: /apis/template.openshift.io/v1/namespaces/openshift/templates/openjdk-web-basic-s2i
-  uid: 97dfab49-353f-4d1d-a2bd-2d0338d937c0
+    template: demoapp
+  name: demoapp
 objects:
 - apiVersion: v1
   kind: Service
