@@ -5,4 +5,9 @@ curl -sSL https://github.com/openshift/source-to-image/releases/download/v1.3.1/
 mv s2i /usr/bin/   
 rm s2i*   
 
+## Install docker
+curl https://download.docker.com/linux/centos/docker-ce.repo > /etc/yum.repos.d/docker.repo  
+yum install -y docker-ce  
+systemctl start docker ; systemctl enable docker  
+
 ## Build s2i-builder image for gradle
