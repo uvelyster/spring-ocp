@@ -83,10 +83,7 @@ objects:
                 key: database-name
                 name: ${DATABASE_SERVICE_NAME}
           image: ' '
-          command:
-              - /bin/sh
-              - -c
-              - "mysql -p$MYSQL_PASSWORD -h127.0.0.1 -u$MYSQL_USER $MYSQL_DATABASE < /docker-entrypoint-initdb.d/create.sql"
+          command: ["/bin/sh", "-c" , "mysql -p$MYSQL_PASSWORD -h127.0.0.1 -u$MYSQL_USER $MYSQL_DATABASE < /docker-entrypoint-initdb.d/create.sql" ]
           imagePullPolicy: IfNotPresent
           livenessProbe:
             initialDelaySeconds: 30
