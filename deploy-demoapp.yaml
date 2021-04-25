@@ -116,7 +116,7 @@ items:
           - containerPort: 8080
             protocol: TCP
           resources: {}
-        - env:
+          env:
           - name: MYSQL_USER
             valueFrom:
               secretKeyRef:
