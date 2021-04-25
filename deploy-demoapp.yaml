@@ -10,13 +10,13 @@ items:
       app: demoapp
       app.kubernetes.io/component: demoapp
       app.kubernetes.io/instance: demoapp
-    name: gradle-builder
+    name: gradlebuilder
   spec:
     lookupPolicy:
       local: false
     tags:
     - annotations:
-        openshift.io/imported-from: quay.io/uvelyster/gradle-builder
+        openshift.io/imported-from: quay.io/uvelyster/gradlebuilder
       from:
         kind: DockerImage
         name: quay.io/uvelyster/gradlebuilder
@@ -70,7 +70,7 @@ items:
       sourceStrategy:
         from:
           kind: ImageStreamTag
-          name: gradle-builder:latest
+          name: gradlebuilder:latest
       type: Source
     triggers:
     - github:
