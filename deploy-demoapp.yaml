@@ -19,7 +19,7 @@ items:
         openshift.io/imported-from: quay.io/uvelyster/gradle-builder
       from:
         kind: DockerImage
-        name: quay.io/uvelyster/gradle-builder
+        name: quay.io/uvelyster/gradlebuilder
       generation: null
       importPolicy: {}
       name: latest
