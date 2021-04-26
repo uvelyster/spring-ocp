@@ -62,6 +62,8 @@ objects:
       spec:
         containers:
         - env:
+          - name: SPRING_ACTIVE_PROFILE
+            value: test
           - name: MYSQL_USER
             valueFrom:
               secretKeyRef:
