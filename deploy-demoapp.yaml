@@ -117,8 +117,8 @@ items:
             protocol: TCP
           resources: {}
           env:
-          - name: SPRING_PROFILES_ACTIVE
-            value: test
+          - name: JAVA_PARAMS
+            value: -Dspring.profiles.active=test
           - name: MYSQL_USER
             valueFrom:
               secretKeyRef:
