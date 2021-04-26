@@ -14,7 +14,7 @@ import org.springframework.context.annotation.PropertySource;
 import javax.sql.DataSource;
 
 @Configuration
-@PropertySource("classpath:application-test.properties")
+//@PropertySource("classpath:application-test.properties")
 public class SpringConfig {
 
     private DataSource dataSource;
@@ -36,7 +36,7 @@ public class SpringConfig {
 
 
     @Bean
-    @Profile("test")
+//    @Profile("test")
     public MemberRepository memberRepository(){
         return new JdbcTemplateMemberRepository(dataSource);
     }
