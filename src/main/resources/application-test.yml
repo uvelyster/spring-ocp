@@ -1,8 +1,8 @@
-  
 spring:
+  profiles:
+    active: test
   datasource:
     url: jdbc:mysql://mysql.demo1.svc.cluster.local:3306/testdb
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${MYSQL_USER}
-    password: ${MYSQL_PASSWORD}
-    
+    password: ${MYSQL_PASSWORD}    
