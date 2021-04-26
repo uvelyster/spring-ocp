@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Profile;
 import javax.sql.DataSource;
 
 @Configuration
+@PropertySource("classpath:application-test.properties")
 public class SpringConfig {
 
     private DataSource dataSource;
@@ -27,14 +28,14 @@ public class SpringConfig {
     }
 
 //    @Bean
-//    @Profile("test")
+//    @Profile("dev")
 ////    public MemberRepository memberRepository(){
 ////        return new MemoryMemberRepository();
 //    }
 
 
     @Bean
-//    @Profile("product")
+    @Profile("test")
     public MemberRepository memberRepository(){
         return new JdbcTemplateMemberRepository(dataSource);
     }
