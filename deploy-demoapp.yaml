@@ -117,7 +117,7 @@ items:
             protocol: TCP
           resources: {}
           env:
-          - name: SPRING_ACTIVE_PROFILE
+          - name: SPRING_PROFILES_ACTIVE
             value: test
           - name: MYSQL_USER
             valueFrom:
