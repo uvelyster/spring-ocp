@@ -118,7 +118,7 @@ items:
           resources: {}
           env:
           - name: JAVA_PARAMS
-            value: -Dspring.profiles.active=test
+            value: -Dspring.profiles.active=prod
           - name: MYSQL_USER
             valueFrom:
               secretKeyRef:
