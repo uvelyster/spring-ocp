@@ -1,6 +1,8 @@
 #!/bin/bash
+
 HOOK_SLEEP=30
 HOOK_RETRIES=2
+
 echo "Trying $HOOK_RETRIES times, sleeping $HOOK_SLEEP sec between tries:"
 while [ "$HOOK_RETRIES" != 0 ]; do
   echo -n 'Checking if MySQL is up...'
