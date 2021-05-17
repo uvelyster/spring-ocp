@@ -2,7 +2,7 @@ FROM openshift/base-centos7
 
 MAINTAINER uvelyster <uvely@naver.com>
 
-ENV GRADLE_VERSION=5.6
+ENV GRADLE_VERSION=6.3
 
 # Docker Image Metadata
 LABEL io.k8s.description="Platform for building (Gradle) and running plain Java applications" \
@@ -28,8 +28,10 @@ RUN wget https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.
 # S2I scripts
 COPY ./s2i/bin/ /usr/libexec/s2i
 
-RUN chown -R 1001:1001 /opt/app-root
-USER 1001
+RUN chgrp -R 0 /opt/app-root && \
+    chmod -R g+rwX /opt/app-root
+# RUN chown -R 1001:1001 /opt/app-root
+# USER 1001
 
 EXPOSE 8080
 
