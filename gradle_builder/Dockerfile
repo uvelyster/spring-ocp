@@ -2,7 +2,7 @@ FROM openshift/base-centos7
 
 MAINTAINER uvelyster <uvely@naver.com>
 
-ENV GRADLE_VERSION=6.3
+ENV GRADLE_VERSION=6.8
 
 # Docker Image Metadata
 LABEL io.k8s.description="Platform for building (Gradle) and running plain Java applications" \
