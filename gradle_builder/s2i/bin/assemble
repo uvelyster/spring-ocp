@@ -37,4 +37,4 @@ gradle build -x test
 
 echo "---> Copying built application to app-root..."
 # TODO this may fail if there are more than one jar generated
-cp -a /opt/app-root/src/build/libs/*.jar /opt/app-root/app.jar
+cp -a /opt/app-root/src/build/libs/src-1.0.jar /opt/app-root/app.jar
