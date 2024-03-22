@@ -16,3 +16,7 @@ systemctl start docker ; systemctl enable docker
 https://www.openshift.com/blog/environment-dependent-property-management-strategies-openshift-pipelines
 
 ## Build s2i-builder image for gradle
+
+
+## Deploy on Openshift 
+oc new-app quay.io/uvelyster/gradlebuilder~https://github.com/uvelyster/spring-ocp --name=spring-ocp
